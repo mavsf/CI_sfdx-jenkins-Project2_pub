@@ -46,12 +46,12 @@ node {
 	    	rmsg = sh returnStdout: true, script: "${toolbelt} force:mdapi:deploy -d manifest/. -u ${HUB_ORG}"
 	    }else{ 
 	    // v1.1 - when package.xml in force-app/main/default
-	        // rmsg = bat returnStdout: true, script: "\"${toolbelt}\\sfdx\" force:mdapi:deploy --wait 10 -d force-app/main/default/. -u ${HUB_ORG}"
+	        rmsg = bat returnStdout: true, script: "\"${toolbelt}\\sfdx\" force:mdapi:deploy --wait 10 -d force-app/main/default/. -u ${HUB_ORG}"
 	    // v1.2 -
 		// rmsg = bat returnStdout: true, script: "\"${toolbelt}\\sfdx\" force:mdapi:deploy --wait 5 -d force-app/main/default/ -u ${HUB_ORG}"
 	    // v2.1 - when package.xml in manifest & deploy to catalog
-		rmsg = bat returnStdout: true, script: "\"${toolbelt}\\sfdx\" force:source:convert -d mdapiout"
-		rmsg = bat returnStdout: true, script: "\"${toolbelt}\\sfdx\" force:mdapi:deploy --wait 10 -d mdapiout -u ${HUB_ORG}"
+		// rmsg = bat returnStdout: true, script: "\"${toolbelt}\\sfdx\" force:source:convert -d mdapiout"
+		// rmsg = bat returnStdout: true, script: "\"${toolbelt}\\sfdx\" force:mdapi:deploy --wait 10 -d mdapiout -u ${HUB_ORG}"
 	    // v2.2 - when package.xml in manifest
 		// rmsg = bat returnStdout: true, script: "\"${toolbelt}\\sfdx\" force:mdapi:deploy --wait 10 -d manifest/. -u ${HUB_ORG}"
 	    }
